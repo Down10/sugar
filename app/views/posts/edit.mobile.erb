@@ -4,16 +4,6 @@
 
 <div class="page_content">
   <%= form_for([@exchange, @post]) do |f| %>
-    <%= f.hidden_field(:format, class: "format") %>
-    <p>
-      <%= f.text_area(
-        :body,
-        id:                    "compose-body",
-        class:                 "rich",
-        "data-format-binding"  => ".format",
-        "data-formats"         => "markdown html"
-      ) %>
-    </p>
-    <p><%= submit_tag "Post" %></p>
-<% end %>
+    <%= render partial: "posts/form", locals: { f: f } %>
+  <% end %>
 </div>

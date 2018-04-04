@@ -2,16 +2,19 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  activerecord:
+  activemodel:
     attributes:
-      avatar:
-        file: Avatar
       configuration:
+        code_of_conduct: Code of Conduct
         google_analytics: Tracking code
         amazon_aws_key: Access Key ID
         amazon_aws_secret: Secret Access Key
         amazon_s3_bucket: S3 Bucket
         amazon_associates_id: Tracking ID
+  activerecord:
+    attributes:
+      avatar:
+        file: Avatar
       exchange:
         body: First post
         nsfw: Not safe for work
@@ -28,6 +31,7 @@ en:
         gamertag: Xbox Live Gamertag
         sony: PlayStation username
         nintendo: Nintendo ID
+        nintendo_switch: Nintendo Switch ID
         steam: Steam ID
         battlenet: Battle.net BattleTag
         twitter: Twitter username
@@ -40,8 +44,10 @@ en:
         stylesheet_url: Custom stylesheet URL
         mobile_stylesheet_url: Custom mobile stylesheet URL
         banned_until: Ban me until
+        memorialized: Memorialized
   configuration:
     configuration: Configuration
+    documents: Documents
     general_settings: General settings
     theme: Theme
     services_and_integration: Services and Integration
@@ -133,3 +139,4 @@ en:
   admin: Admin
   save: Save
   new: New
+  nsfw_message: "Discussion is NSFW"

@@ -2,13 +2,13 @@
 
 class HelpController < ApplicationController
   def index
-    redirect_to help_page_path("keyboard")
+    redirect_to keyboard_help_url
   end
 
-  def show
-    case params[:page]
-    when "keyboard"
-      render template: "help/keyboard"
-    end
+  def code_of_conduct
+    @code_of_conduct = Sugar.config.code_of_conduct
+  end
+
+  def keyboard
   end
 end

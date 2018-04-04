@@ -1,5 +1,5 @@
-//= require default/reset
-//= require default/components/spoilers
+@import 'default/reset';
+@import 'default/components/spoilers';
 
 .clearfix:after {
   content: ".";
@@ -23,8 +23,11 @@ a:hover {
   color: #025;
 }
 
-strong {
+b, strong {
   font-weight: bold;
+}
+em, i {
+  font-style: italic;
 }
 
 body {
@@ -336,6 +339,11 @@ body[orient="landscape"] .discussion p, body[orient="landscape"] .conversation p
   border-bottom: 1px solid #ddd;
   font-size: 11px;
   background: #f8f7f1;
+  color: #84806d;
+}
+.posts .deleted-post {
+  padding: 3px 0px;
+  font-size: 11px;
   color: #84806d;
 }
 .posts .me_post {
@@ -660,6 +668,10 @@ textarea.rich {
   }
 }
 
+section.login {
+  padding-top: 20px;
+}
+
 /* Retina display overrides */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   #header {
@@ -673,10 +685,6 @@ textarea.rich {
   .content {
     background: #fff image-url('b3s/mobile/contentbg_x2.png') repeat-x;
     background-size: 23px 24px;
-  }
-  .imageloader {
-    background: transparent image-url('b3s/mobile/imageloader_x2.png') no-repeat;
-    background-size: 290px 36px;
   }
   .discussions .discussion {
     background: #fff image-url('b3s/mobile/contentbg_light_x2.png') bottom left repeat-x;

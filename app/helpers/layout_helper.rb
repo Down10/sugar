@@ -14,6 +14,10 @@ module LayoutHelper
     @body_classes.uniq.join(" ")
   end
 
+  def discussion_action?(action)
+    params[:controller] == "discussions" && params[:action] == action
+  end
+
   def frontend_configuration
     {
       authToken:          form_authenticity_token,
@@ -57,7 +61,7 @@ module LayoutHelper
     Sugar.config.emoticons.split(/\s+/).map do |name|
       emoji = Emoji.find_by_alias(name)
       if emoji
-        { name: name, image: image_path("emoji/#{emoji.image_filename}") }
+        { name: name, image: emoji_path(emoji) }
       end
     end.compact
   end

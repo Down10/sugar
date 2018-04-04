@@ -141,7 +141,7 @@ class UsersController < ApplicationController
       :mobile_theme, :msn, :notify_on_message, :realname,
       :stylesheet_url, :theme, :time_zone, :twitter, :website,
       :password, :confirm_password, :banned_until, :preferred_format,
-      :sony, :nintendo, :steam, :battlenet,
+      :sony, :nintendo, :nintendo_switch, :steam, :battlenet,
       avatar_attributes: [:file]
     ] + allowed_user_admin_params + allowed_admin_params
   end
@@ -150,7 +150,7 @@ class UsersController < ApplicationController
     return [] unless current_user? && current_user.user_admin?
     [
       :username, :banned, :user_admin, :moderator,
-      :trusted, :available_invites, :status
+      :trusted, :available_invites, :status, :memorialized
     ]
   end
 
